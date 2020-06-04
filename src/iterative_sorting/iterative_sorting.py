@@ -1,16 +1,35 @@
 # TO-DO: Complete the selection_sort() function below
+
+
+
+# [1, 2, 4, 5, 6, 8, 9,             0, 3, 7]
+
+
 def selection_sort(arr):
     # loop through n-1 elements
+    # Divide your hand into sorted on the left and unsorted on the right 
+    # Sorted is just the first element
+    # Then go card by card and move them into place.
+    # Loop through all elements in unsorted...
     for i in range(0, len(arr) - 1):
         cur_index = i
         smallest_index = cur_index
         # TO-DO: find next smallest element
         # (hint, can do in 3 loc)
-        # Your code here
+        # Your code here   
+    for j in range(cur_index + 1, len(arr)): # j is our sliding index
+        # Shift sorted to the right until correct position found
+        if arr [j] < arr[smallest_index]:
+            # Insert at that position
+            smallest_index = j
+
 
 
         # TO-DO: swap
         # Your code here
+        arr[cur_index], arr[smallest_index] = arr[smallest_index], arr[cur_index]
+        
+
 
     return arr
 
@@ -18,7 +37,16 @@ def selection_sort(arr):
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
     # Your code here
+    indexing_length = len(arr) - 1
+    sorted = False
 
+    while not sorted:
+        sorted = True
+        for i in range(0, indexing_length):
+            if arr[i] > arr[i+1]:
+                sorted = False
+                # Flip the values in list
+                arr[i], arr[i+1] = arr[i+1], arr[i]
 
     return arr
 
