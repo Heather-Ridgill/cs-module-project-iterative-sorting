@@ -17,13 +17,11 @@ def selection_sort(arr):
         # TO-DO: find next smallest element
         # (hint, can do in 3 loc)
         # Your code here   
-    for j in range(cur_index + 1, len(arr)): # j is our sliding index
+        for j in range(cur_index + 1, len(arr)): # j is our sliding index
         # Shift sorted to the right until correct position found
-        if arr [j] < arr[smallest_index]:
+            if arr [j] < arr[smallest_index]:
             # Insert at that position
-            smallest_index = j
-
-
+                smallest_index = j
 
         # TO-DO: swap
         # Your code here
