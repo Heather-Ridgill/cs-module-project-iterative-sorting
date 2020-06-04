@@ -1,5 +1,7 @@
 def linear_search(arr, target):
-    # Your code here
+    for i in range(len(arr)):
+        if arr[i] == target:
+            return i
 
 
     return -1   # not found
@@ -39,15 +41,3 @@ def binary_search(arr, target):
     # x doesn't exist in the list
     return -1
 
-
-# if __name__ == '__main__':
-
-#     A = [2, 5, 6, 8, 9, 10]
-#     key = 5
-
-#     index = binarySearch(A, key)
-
-#     if index != -1:
-#         print("Element found at index", index)
-#     else:
-#         print("Element found not in the list")
