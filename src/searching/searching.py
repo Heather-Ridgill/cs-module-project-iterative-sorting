@@ -9,7 +9,7 @@ def linear_search(arr, target):
 
 # Write an iterative implementation of Binary Search
 def binary_search(arr, target):
-    # search space is A[left..right]
+    # search space is arr[left to right]
     (left, right) = (0, len(arr) - 1)
 
     # till search space consists of at-least one element
